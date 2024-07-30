@@ -1,3 +1,4 @@
+import AboutUs from "@/components/aboutus";
 import MasterHead from "@/components/masterHead";
 import Head from "next/head";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MasterHead />
+      <AboutUs />
     </>
   );
 }
