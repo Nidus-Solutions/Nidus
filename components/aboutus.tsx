@@ -4,8 +4,8 @@ import Member from './member';
 const AboutUs: React.FC = () => {
     return (
         <section className='flex flex-col bg-white py-20 text-3xl md:text-4xl'>
-            <div className='conteiner mx-auto px-11'>
-                <p className='leading-tight max-w-5xl mx-auto text-4xl lg:text-4xl tracking-tight text-justify'>
+            <div className='conteiner mx-auto px-11 '>
+                <p className='leading-tight max-w-5xl mx-auto text-3xl lg:text-4xl tracking-tight text-justify'>
                     <strong>Nossa missão é transformar ideias em soluções digitais inovadoras.</strong>
                     Somos apaixonados por tecnologia e design, e nos dedicamos a oferecer as melhores soluções em websites, sistemas e design para nossos clientes.
                 </p>

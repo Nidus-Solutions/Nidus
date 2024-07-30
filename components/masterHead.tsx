@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
 import Image from 'next/image';
+import { ScrollContext } from '@/utils/scroll-observer';
 
 const MasterHead: React.FC = () => {
+    const refContainer = useRef<HTMLDivElement>(null);
+    const { scrollY } = useContext(ScrollContext);
+
+    let progress = 0;
+
+    const { current: elContainer } = refContainer;
+
+    if (elContainer) {
+        progress = Math.min(1, scrollY / elContainer.clientHeight);
+    }
+
     return (
-        <div className='min-h-screen flex flex-col items-center justify-between'>
+        <div
+            ref={refContainer}
+            className='min-h-screen flex flex-col items-center justify-between sticky top-0 -z-10'
+            style={{
+                transform: `translateY(${progress * 30}vh)`
+            }}
+        >
             <video autoPlay loop muted playsInline className='absolute w-full h-full object-cover'>
                 <source src='/assets/videos/masthead-bg.mp4' type='video/mp4' />
             </video>

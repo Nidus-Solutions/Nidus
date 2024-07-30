@@ -10,7 +10,6 @@ interface MemberProps {
     role: string;
 }
 
-
 const Member: React.FC<MemberProps> = ({ name, socialId, link, id, role }) => {
     return (
         <div>
