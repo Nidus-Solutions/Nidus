@@ -1,5 +1,6 @@
 import AboutUs from "@/components/aboutus";
 import ContactUs from "@/components/contactus";
+import Footer from "@/components/footer";
 import MasterHead from "@/components/masterHead";
 import Skills from "@/components/skills";
 import Trustedby from "@/components/trustedby";
@@ -14,11 +15,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <MasterHead />
       <AboutUs />
       <Skills />
       <Trustedby />
       <ContactUs />
+      <Footer />
+      
     </div>
   );
 }
