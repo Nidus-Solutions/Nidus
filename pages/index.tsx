@@ -1,5 +1,6 @@
 import AboutUs from "@/components/aboutus";
 import MasterHead from "@/components/masterHead";
+import Skills from "@/components/skills";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <MasterHead />
       <AboutUs />
+      <Skills />
     </div>
   );
 }
