@@ -1,6 +1,7 @@
 import AboutUs from "@/components/aboutus";
 import MasterHead from "@/components/masterHead";
 import Skills from "@/components/skills";
+import Trustedby from "@/components/trustedby";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <MasterHead />
       <AboutUs />
       <Skills />
+      <Trustedby />
     </div>
   );
 }
