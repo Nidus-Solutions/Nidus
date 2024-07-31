@@ -35,7 +35,7 @@ const MasterHead: React.FC = () => {
                     src="/assets/icons/logo.png"
                     width={100}
                     height={100}
-                    alt="Scroll Down"
+                    alt="Logo"
                     onLoad={handleImageLoaded}
                 />
             </div>
