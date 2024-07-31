@@ -32,7 +32,7 @@ const MasterHead: React.FC = () => {
             </video>
             <div className={`z-10 flex-grow-0 drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] pb-20 md:pb-3 transition-opacity duration-1000  ${imageLoaded ? 'opacity-100' : 'opaticity-0'}`}>
                 <Image
-                    src="/assets/icons/logo.png"
+                    src="/assets/logo-img.png"
                     width={100}
                     height={100}
                     alt="Logo"
