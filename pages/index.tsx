@@ -1,4 +1,5 @@
 import AboutUs from "@/components/aboutus";
+import ContactUs from "@/components/contactus";
 import MasterHead from "@/components/masterHead";
 import Skills from "@/components/skills";
 import Trustedby from "@/components/trustedby";
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutUs />
       <Skills />
       <Trustedby />
+      <ContactUs />
     </div>
   );
 }

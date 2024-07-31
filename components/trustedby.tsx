@@ -10,7 +10,7 @@ const TrustedBy: React.FC = () => {
                     <span className="whitespace-nowrap">alguns dos aplicativos que você usa diariamente</span>
                 </h3>
             </div>
-            <Testimonials />
+            {/* <Testimonials /> */}
             <div className="flex flex-col justify-center items-center">
                 <div className="container mx-auto lg:max-w-[70%] lh:px-10">
                     <h3 className="text-3xl lg:text-4xl tracking-tight text-center px-10 !leading-[3.5rem]">
