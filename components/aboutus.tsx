@@ -32,14 +32,14 @@ const AboutUs: React.FC = () => {
                         name='Thaigo Viana'
                         socialId='@thiago_viana'
                         link='https://www.instagram.com/thiago_viana'
-                        id='th'
+                        id='thiago'
                         role='Desenvolvedor'
                     />
                     <Member
                         name='Gabriela Margelo'
                         socialId='@gaby_margelo'
                         link='https://www.instagram.com/gaby_margelo'
-                        id='joana'
+                        id='gaby'
                         role='Designer'
                     />
                 </div>

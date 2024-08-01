@@ -6,8 +6,8 @@ const TrustedBy: React.FC = () => {
         <section className="bg-white text-black min-h-screen flex flex-col justify-center gap-16 md:gap-32">
             <div className="flex flex-col justify-center items-center">
                 <h3 className="text-xl lg:text-2xl tracking-tight text-center px-10 !leading-[1.5rem]">
-                    <span className="whitespace-nowrap">Confiável por</span>{' '}
-                    <span className="whitespace-nowrap">alguns dos aplicativos que você usa diariamente</span>
+                    <span className="whitespace-nowrap font-bold">Nidus!</span>{' '}
+                    <span className="whitespace-nowrap">`Seu significado vindo do latin é {`&ldquo;`} ninhu. Isso que queremos para sua empresa`</span>
                 </h3>
             </div>
             {/* <Testimonials /> */}

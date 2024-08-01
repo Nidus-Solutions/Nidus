@@ -12,20 +12,22 @@ interface MemberProps {
 
 const Member: React.FC<MemberProps> = ({ name, socialId, link, id, role }) => {
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center gap-5'>
             <Image
-                src={`/assets/team/margelo_faces_${id}.svg`}
+                src={`/assets/team/nidus_faces_${id}.svg`}
                 alt={name}
-                width={1366 / 3}
-                height={1555 / 3}
+                width={1366 / 4}
+                height={1555 / 4}
             />
 
-            <div className='text-2xl xl:text-3xl'>
-                <p>{name}</p>
-                <span className='text-xl'>{role}</span>
-            </div>
-            <div className='text-xl'>
-                <Link target='_blank' href={link}>{socialId}</Link>
+            <div>
+                <div className='text-2xl xl:text-3xl'>
+                    <p>{name}</p>
+                    {/* <span className='text-xl'>{role}</span> */}
+                </div>
+                <div className='text-xl'>
+                    <Link target='_blank' href={link}>{socialId}</Link>
+                </div>
             </div>
         </div>
     )
