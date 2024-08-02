@@ -7,7 +7,7 @@ const TrustedBy: React.FC = () => {
             <div className="flex flex-col justify-center items-center">
                 <h3 className="text-xl lg:text-2xl tracking-tight text-center px-10 !leading-[1.5rem]">
                     <span className="whitespace-nowrap font-bold">Nidus!</span>{' '}
-                    <span className="whitespace-nowrap">`Seu significado vindo do latin é {`&ldquo;`} ninhu. Isso que queremos para sua empresa`</span>
+                    <span className="whitespace-nowrap">Seu significado vindo do latin é &ldquo; ninho &lrquo;. Isso que queremos para sua empresa</span>
                 </h3>
             </div>
             {/* <Testimonials /> */}
