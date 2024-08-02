@@ -36,7 +36,7 @@ const AboutUs: React.FC = () => {
                         role='Desenvolvedor'
                     />
                     <Member
-                        name='Gabriela Moronari'
+                        name='Gabryella Moronari'
                         socialId='@gaby_moronari'
                         link='https://www.instagram.com/gaby_moronari'
                         id='gaby'
