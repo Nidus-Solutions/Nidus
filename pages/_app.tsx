@@ -1,11 +1,13 @@
-import "@/styles/globals.css";
-import ScrollObserver from "@/utils/scroll-observer";
 import type { AppProps } from "next/app";
+import Layout from "../components/layout/main";
+import { ChakraProvider } from "@chakra-ui/react";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
-    <ScrollObserver>
-      <Component {...pageProps} />;
-    </ScrollObserver>
+    <ChakraProvider>
+      <Layout router={router}>
+        <Component {...pageProps} />;
+      </Layout>
+    </ChakraProvider>
   )
 }

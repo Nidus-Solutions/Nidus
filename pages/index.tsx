@@ -1,9 +1,3 @@
-import AboutUs from "@/components/aboutus";
-import ContactUs from "@/components/contactus";
-import Footer from "@/components/footer";
-import MasterHead from "@/components/masterHead";
-import Skills from "@/components/skills";
-import Trustedby from "@/components/trustedby";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,12 +10,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MasterHead />
-      <AboutUs />
-      <Skills />
-      <Trustedby />
-      <ContactUs />
-      <Footer />
       
     </div>
   );
