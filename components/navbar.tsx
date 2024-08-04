@@ -123,4 +123,6 @@ const Navbar = (props: { path: string }) => {
     )
 }
 
+Navbar.displayName = 'Navbar'
+
 export default Navbar;
