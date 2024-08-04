@@ -1,8 +1,8 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
+import Footer from '../Footer'
 
 interface MainProps {
     children: React.ReactNode,
@@ -21,8 +21,21 @@ const Main = ({ children, router }: MainProps) => {
 
             <Navbar path={router.asPath} />
 
-            <Container>
+            <Container maxW='container.xl' pt={14}>
                 {children}
+
+                <Box 
+                    mt={8}
+                    borderTopWidth={1}
+                    borderColor="gray.200"
+                    pt={4}
+                    display={'flex'}
+                    justifyContent={'center'}
+                    alignItems={'center'}
+                >
+                    <Footer />
+                </Box>
+
             </Container>
         </Box>
     )

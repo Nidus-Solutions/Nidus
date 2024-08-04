@@ -15,6 +15,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import ThemeToggleButton from './theme-toggle-button'
 
 interface LinkItemProps {
     href: string,
@@ -52,7 +53,6 @@ const Navbar = (props: { path: string }) => {
 
     return (
         <Box
-            position="fixed"
             as="nav"
             w="100%"
             bg={useColorModeValue('#ffffff40', '#20202380')}
@@ -81,16 +81,45 @@ const Navbar = (props: { path: string }) => {
                     <LinkItem href="/" path={path}>
                         Home
                     </LinkItem>
-                    <LinkItem href="/about" path={path}>
-                        About
+                    <LinkItem href="/aboutus" path={path}>
+                        Sobre Nós
                     </LinkItem>
                     <LinkItem href="/services" path={path}>
-                        Services
+                        Serviços
                     </LinkItem>
                     <LinkItem href="/contact" path={path}>
-                        Contact
+                        Contatos
                     </LinkItem>
                 </Stack>
+
+                <Box  alignItems={'right'}>
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} mr={2}>
+                        <Menu isLazy id="navbar-menu">
+                            <MenuButton
+                                as={IconButton}
+                                icon={<HamburgerIcon />}
+                                variant="outline"
+                                aria-label="Options"
+                            />
+                            <MenuList>
+                                <MenuItem as={MenuLink} href="/">
+                                    Home
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/aboutus">
+                                    Sobre Nós
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/services">
+                                    Serviços
+                                </MenuItem>
+                                <MenuItem as={MenuLink} href="/contact">
+                                    Contatos
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Box>
+                    <ThemeToggleButton />
+
+                </Box>
             </Container>
 
         </Box>
