@@ -24,7 +24,6 @@ interface LinkItemProps {
     children: React.ReactNode
 }
 
-
 const LinkItem = ({ href, path, target, children, ...props }: LinkItemProps) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -118,13 +117,10 @@ const Navbar = (props: { path: string }) => {
                         </Menu>
                     </Box>
                     <ThemeToggleButton />
-
                 </Box>
             </Container>
-
         </Box>
     )
 }
 
 export default Navbar;
-
