@@ -17,7 +17,7 @@ const AboutUs: React.FC = () => {
                 </div>
             </div>
             <div className='container mx-auto px-11 text-center mt-28'>
-                <div className='p-6 md:p-12 font-bold z-10 drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-col items-center justify-center flex-col'>
+                <div className='p-6 md:p-12 font-bold z-10 drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-col items-center justify-center'>
                     <h3 className='mb-6 text-4xl xl:text-5xl'>Nossa Equipe</h3>
                 </div>
                 <div className='mt-10 grid grid-cols-1 md:grid-cols-3 md:gap-10 '>
