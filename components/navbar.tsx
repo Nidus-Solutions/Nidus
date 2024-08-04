@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { forwardRef } from 'react'
+import React from 'react'
 import {
     Container,
     Box,
@@ -43,7 +43,7 @@ const LinkItem = ({ href, path, target, children, ...props }: LinkItemProps) => 
     )
 }
 
-const MenuLink = forwardRef<HTMLAnchorElement, any>((props, ref) => (
+const MenuLink = React.forwardRef<HTMLAnchorElement, any>((props, ref) => (
     <Link ref={ref} display="block" p={2} {...props} />
 ))
 
