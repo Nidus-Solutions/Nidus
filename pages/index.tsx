@@ -34,13 +34,16 @@ const Home = () => {
         </Link>
       </Container>
       <Container
-        pb={16}
+        py={16}
         maxW="container.xl"
       >
         <Text
           fontSize={{ base: "2xl", md: "2xl" }}
           fontWeight={'thin'}
           textAlign={'left'}
+          color="#2C3E50"
+          maxW="container.lg"
+
         >
           Conhecemos nossas ferramentas de cabo a rabo.
           Nossa equipe já contribuiu com diversos commits para projetos open-source e já estamos trabalhando com as tecnologias mais recentes do mercado.
