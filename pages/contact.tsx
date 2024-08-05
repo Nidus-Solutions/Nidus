@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
-import Image from "next/image";
 import axio from "axios";
-import { Button, Container, FormControl, FormLabel, Heading, Input, Textarea, useToast } from "@chakra-ui/react";
+import { Button, Container, FormControl, Heading, Input, Textarea, useToast } from "@chakra-ui/react";
 import Layout from "@/components/layout/article";
 
 const Contact: React.FC = () => {
@@ -55,7 +54,6 @@ const Contact: React.FC = () => {
 
     const handleOnSubmit = useCallback((e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        console.log("inputs");
         setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
         axio({
             method: "POST",
