@@ -1,6 +1,6 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import Footer from '../Footer'
 
@@ -27,7 +27,7 @@ const Main = ({ children, router }: MainProps) => {
                 <Box 
                     mt={8}
                     borderTopWidth={1}
-                    borderColor="gray.200"
+                    borderColor={useColorModeValue("gray.400", "gray.200")}
                     pt={4}
                     display={'flex'}
                     justifyContent={'center'}
