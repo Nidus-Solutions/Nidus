@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/article";
 
-import { Box, Button, Container, Heading, Text, Textarea } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Link, Text, Textarea } from "@chakra-ui/react";
 
 const Home = () => {
   return (
@@ -19,9 +19,16 @@ const Home = () => {
           Uma empresa de desenvolvimento de software jovem e inovadora. Com foco em qualidade e satisfação do cliente.
           Estamos sempre em busca de novos desafios e soluções. Vamos juntos?
         </Text>
-        <Box mt={4}>
-          <Button colorScheme="blue">Saiba mais</Button>
-        </Box>
+        {/* Btn saiba mais */}
+        <Link href="/aboutus">
+          <Button
+            mt={4}
+            colorScheme="teal"
+            size="lg"
+          >
+            Saiba mais
+          </Button>
+        </Link>
       </Container>
       <Container
         py={14}
