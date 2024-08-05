@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/article";
 import Member from '@/components/member';
 
-import { Box, Button, Container, Heading, Link, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
+import { Button, Container, Heading, Link, Text, useColorModeValue } from "@chakra-ui/react";
 
 const Aboutus = () => {
     return (
