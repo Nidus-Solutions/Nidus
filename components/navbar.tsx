@@ -34,7 +34,13 @@ const LinkItem = ({ href, path, target, children, ...props }: LinkItemProps) => 
             scroll={false}
             p={2}
             bg={active ? 'grassTeal' : undefined}
-            color={active ? '#202023' : inactiveColor}
+            color={active ? 'blue.300' : inactiveColor}
+            borderBottom={active ? '2px' : undefined}
+            borderColor={active ? 'blue.500' : undefined}
+            _hover={{
+                bg: 'grassTeal',
+                color: 'blue.100',
+            }}
             target={target}
             {...props}
         >
