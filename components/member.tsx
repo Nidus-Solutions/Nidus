@@ -18,7 +18,7 @@ const Members: React.FC<MemberProps> = ({ name, socialId, link, id }) => {
                 height={1555 / 4}
             />
 
-            <Container>
+            <Container mt={{ base: 2, md: 4}}>
                 <h3>{name}</h3>
                 <a href={link}>{socialId}</a>
             </Container>

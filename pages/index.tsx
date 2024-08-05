@@ -8,9 +8,10 @@ const Home = () => {
       <Container
         py={14}
         maxW="container.xl"
+        color="#2C3E50"
       >
-        <Text fontSize={"20px"} fontWeight={'thin'}>Ei! Somos a</Text>
-        <Heading as="h1" fontSize={'70px'}>Nidus</Heading>
+        <Text fontSize={"20px"} color="#2C3E50" fontWeight={'thin'}>Ei! Somos a</Text>
+        <Heading as="h1" color="#3498DB" fontSize={'70px'}>Nidus</Heading>
         <Heading as="h1" fontSize={'50px'}>Desenvolvimento | Web Designer 🥑</Heading>
         <Text
           mt={4}
@@ -23,7 +24,8 @@ const Home = () => {
         <Link href="/aboutus">
           <Button
             mt={4}
-            colorScheme="teal"
+            bg="#3498DB"
+            color="#ffffff"
             size="lg"
           >
             Saiba mais

@@ -6,12 +6,15 @@ import Footer from '../Footer'
 
 interface MainProps {
     children: React.ReactNode,
-    router: AppProps["router"]
+    router: AppProps["router"],
 }
 
 const Main = ({ children, router }: MainProps) => {
+
+    const fix = router.route == "/services" ? "fixed" : "relative"
+
     return (
-        <Box as="main" pb={8}>
+        <Box as="main">
             <Head>
                 <title>Nidus</title>
                 <meta name="description" content="Site da empresa nidus" />
@@ -21,22 +24,25 @@ const Main = ({ children, router }: MainProps) => {
 
             <Navbar path={router.asPath} />
 
-            <Container maxW='container.xl' pt={14}>
+            <Container maxW='container.xl' pt={14} >
                 {children}
-
-                <Box 
-                    mt={8}
-                    borderTopWidth={1}
-                    borderColor={useColorModeValue("gray.400", "gray.200")}
-                    pt={4}
-                    display={'flex'}
-                    justifyContent={'center'}
-                    alignItems={'center'}
-                >
-                    <Footer />
-                </Box>
-
             </Container>
+
+            <Box
+                mt={8}
+                borderTopWidth={1}
+                borderColor="#1ABC9C"
+                bg="#2C3E50"
+                pt={4}
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                bottom={0}
+                minW={'full'}
+                position={fix}
+            >
+                <Footer />
+            </Box>
         </Box>
     )
 }

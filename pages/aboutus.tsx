@@ -7,22 +7,17 @@ const Aboutus = () => {
     return (
         <Layout title="Sobre Nós">
             <Container
-                mt={4}
                 display={"flex"}
                 flexDirection={"column"}
                 fontSize={{ base: "3xl", md: "4xl" }}
                 maxW={"container.xdl"}
+                justifyContent='left'
             >
-                <Box
-                    borderBottomWidth={2}
-                    borderColor="gray.500"
-                    pt={4}
-                    mx="auto"
-                >
-                    <Heading as="h1" textAlign="center" color={useColorModeValue("gray.800", "white")}>
+                <Container pb={{ md: 5, lg: 8 }}>
+                    <Heading as="h1" textAlign="left" color="gray.800">
                         Sobre Nós
                     </Heading>
-                </Box>
+                </Container>
 
                 <Container
                     display={"flex"}
@@ -102,7 +97,7 @@ const Aboutus = () => {
                             colorScheme="teal"
                             size="lg"
                         >
-                           Conheça Nossos Serviços
+                            Conheça Nossos Serviços
                         </Button>
                     </Link>
                 </Container>

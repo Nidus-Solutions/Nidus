@@ -15,7 +15,6 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleButton from './theme-toggle-button'
 
 interface LinkItemProps {
     href: string,
@@ -26,20 +25,18 @@ interface LinkItemProps {
 
 const LinkItem = ({ href, path, target, children, ...props }: LinkItemProps) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
     return (
         <Link
             as={NextLink}
             href={href}
             scroll={false}
             p={2}
-            bg={active ? 'grassTeal' : undefined}
-            color={active ? 'blue.300' : inactiveColor}
+            color={active ? '#F1C40F' : "#EAE0D5"}
             borderBottom={active ? '2px' : undefined}
-            borderColor={active ? 'blue.500' : undefined}
+            borderColor={active ? '#F1C40F' : undefined}
             _hover={{
-                bg: 'grassTeal',
-                color: 'blue.100',
+                bg: 'none',
+                color: '#F1C40F',
             }}
             target={target}
             {...props}
@@ -60,7 +57,8 @@ const Navbar = (props: { path: string }) => {
         <Box
             as="nav"
             w="100%"
-            bg={useColorModeValue('#ffffff40', '#20202380')}
+            bg="#2C3E50"
+            color="#F1C40F"
             zIndex={2}
             css={{ backdropFilter: 'blur(10px)' }}
             {...props}
@@ -97,8 +95,8 @@ const Navbar = (props: { path: string }) => {
                     </LinkItem>
                 </Stack>
 
-                <Box  alignItems={'right'}>
-                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} mr={2}>
+                <Box alignItems={'right'} >
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} mr={2} >
                         <Menu isLazy id="navbar-menu">
                             <MenuButton
                                 as={IconButton}
@@ -122,7 +120,6 @@ const Navbar = (props: { path: string }) => {
                             </MenuList>
                         </Menu>
                     </Box>
-                    <ThemeToggleButton />
                 </Box>
             </Container>
         </Box>

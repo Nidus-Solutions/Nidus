@@ -1,7 +1,9 @@
+import { Heading, Container, Icon, SimpleGrid, Link, Button } from "@chakra-ui/react";
+import CardServices from "@/components/cardServices";
 import Layout from "@/components/layout/article";
-import CardServices from "@/components/Card";
-
-import { Box, Button, Container, Heading, Link, SimpleGrid, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
+import { PiGraphBold } from "react-icons/pi";
+import { FaRegLightbulb } from "react-icons/fa";
+import { IoRocketOutline } from "react-icons/io5";
 
 const Services = () => (
     <Layout title="Sobre Nós">
@@ -10,34 +12,48 @@ const Services = () => (
             flexDirection={"column"}
             fontSize={{ base: "3xl", md: "4xl" }}
             maxW={"container.xdl"}
+            justifyContent='left'
         >
-            <Box
-                borderBottomWidth={2}
-                borderColor="gray.500"
-                mx="auto"
-            >
-                <Heading as="h1" textAlign="center" color={useColorModeValue("gray.800", "white")}>
-                    Nossos Serviços
+            <Container pb={{ md: 5, lg: 8 }}>
+                <Heading as="h1" textAlign="left" color="gray.800">
+                    Serviços
                 </Heading>
-            </Box>
+            </Container>
 
-            <Container
-                maxW={{ base: "container.sm", md: "container.md", lg: "container.md" }}
-                mt={{ base: 4, md: 12, lg: 14 }}
-            >
-                <SimpleGrid spacing={4} columns={1}>
+            <Container maxW={{ base: "container.xdl", md: "container.lg", lg: "container.lg" }}>
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
                     <CardServices
-                        align="left"
-                        title='Desenvolvimento Web'
-                        description={`
-                        Desenvolvemos websites responsivos e otimizados para SEO. Pensa em ter um site que se adapta a qualquer dispositivo e que seja facilmente encontrado no Google? Nós podemos te ajudar!
-                            `}
+                        title="Web"
+                        items={["Criação de site", "Manutenção de site", "E-commerce", "Landing Page"]}
+                        icons={PiGraphBold}
                     />
-                    <CardServices align="right" title='Desenvolvimento Web' description='Desenvolvemos websites responsivos e otimizados para SEO.' />
-                    <CardServices align="left" title='Desenvolvimento Web' description='Desenvolvemos websites responsivos e otimizados para SEO.' />
+                    <CardServices
+                        title="Performance"
+                        items={["Google Analytics", "SEO", "Google Tag Manager", "Google Ads", "Meta Ads", "Facebook Ads"]}
+
+                        icons={IoRocketOutline}
+                    />
+                    <CardServices
+                        title="Branding"
+                        items={["Criação de logo", "Identidade visual", "Manual de marca", "cartões de visita", "envelopes", "timbrados", "pastas"]}
+
+                        icons={FaRegLightbulb}
+                    />
                 </SimpleGrid>
             </Container>
 
+            <Container display="flex" justifyContent="center" minW="full" mt="10">
+                <Link href="/contact">
+                    <Button
+                        size="lg"
+                        bg="#3498DB"
+                        color="#ffffff"
+                        _hover={{ bg: "#2980B9" }}
+                    >
+                        Entre em contato
+                    </Button>
+                </Link>
+            </Container>
         </Container>
     </Layout>
 )
