@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/article";
 import Member from '@/components/member';
 
-import { Box, Button, Container, Heading, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Link, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
 
 const Home = () => {
     return (
@@ -15,7 +15,6 @@ const Home = () => {
                 <Box
                     borderBottomWidth={2}
                     borderColor="gray.500"
-                    pt={4}
                     mx="auto"
                 >
                     <Heading as="h1" textAlign="center" color={useColorModeValue("gray.800", "white")}>
@@ -35,7 +34,7 @@ const Home = () => {
                         mt={4}
                         lineHeight={1.3}
                     >
-                        O Nidus é uma empresa de tecnologia que tem como objetivo ajudar empresas a se tornarem mais eficientes e competitivas através da tecnologia.
+                        O Nidus é uma empresa de tecnologia que tem como objetivo ajudar pequenas empresas a se tornarem mais eficientes e competitivas através da tecnologia.
                         Nós acreditamos que a tecnologia é uma ferramenta poderosa que pode ser usada para melhorar a vida das pessoas e a eficiência das empresas.
                     </Text>
 
@@ -45,7 +44,7 @@ const Home = () => {
                         lineHeight={1.3}
                         mt={4}
                     >
-                        Nossa missão é trasformar ideias em soluções digitais inovadora. Somos apaixonados por tecnologia e acreditamos que ela pode ser usada para resolver os problemas mais complexos.
+                        Nossa missão é trasformar ideias em realidade, e faremos tudo que estiver ao nosso alcance para ajudar nossos clientes a alcançarem seus objetivos. De pagamenos facilitados ao suporte técnico, estamos aqui para ajudar.
                     </Text>
                 </Container>
 
@@ -54,6 +53,8 @@ const Home = () => {
                     flexDirection={"column"}
                     fontSize={{ base: "xl", md: "2xl" }}
                     maxW={"container.lg"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                 >
                     <Heading
                         as="h2"
@@ -71,7 +72,7 @@ const Home = () => {
                         alignItems={"center"}
                         maxW={"container.lg"}
                         textAlign={"center"}
-                        mt={{ base: 4, md: 8 }}
+                        mt={{ base: 4, md: 12, lg: 14 }}
                     >
                         <Member
                             name='João Gustavo Bispo'
@@ -92,6 +93,16 @@ const Home = () => {
                             id='gaby'
                         />
                     </Container>
+
+                    <Link href="/services">
+                        <Button
+                            mt={{ base: 4, md: 12, lg: 14 }}
+                            colorScheme="teal"
+                            size="lg"
+                        >
+                           Conheça Nossos Serviços
+                        </Button>
+                    </Link>
                 </Container>
             </Container>
         </Layout>
