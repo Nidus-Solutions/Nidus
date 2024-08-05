@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                 p={4}
                 gap={6}
             >
-                <Heading as='h1' size='2xl' textAlign='center'>
+                <Heading as='h1' size='2xl' textAlign='center' color="#2C3E50">
                     Entre em contato
                 </Heading>
 
@@ -117,7 +117,13 @@ const Contact: React.FC = () => {
                         type='text'
                         value={inputs.company}
                         onChange={handlOnChange}
+                        _hover={
+                            {
+                                borderColor: "#3498DB"
+                            }
+                        }
                         placeholder="Nome da empresa ou Pessoal"
+                        _placeholder={{ color: "#2C3E50", fontSize: "lg" }}
                         required
                     />
                     <Input
@@ -130,7 +136,13 @@ const Contact: React.FC = () => {
                         type='email'
                         value={inputs.email}
                         onChange={handlOnChange}
+                        _hover={
+                            {
+                                borderColor: "#3498DB"
+                            }
+                        }
                         placeholder='Email'
+                        _placeholder={{ color: "#2C3E50", fontSize: "lg" }}
                         required
                     />
 
@@ -145,7 +157,13 @@ const Contact: React.FC = () => {
                         id='message'
                         value={inputs.message}
                         onChange={handlOnChange}
+                        _hover={
+                            {
+                                borderColor: "#3498DB"
+                            }
+                        }
                         placeholder='Escreva sua mensagem'
+                        _placeholder={{ color: "#2C3E50", fontSize: "lg" }}
                         size='sm'
                         required
                     />
@@ -153,7 +171,13 @@ const Contact: React.FC = () => {
                     <Button
                         type='submit'
                         disabled={status.submitting}
-                        colorScheme='blue'
+                        bgColor="#3498DB"
+                        color="#ffffff"
+                        borderRadius={10}
+                        _hover={{ bgColor: "#2C3E50" }}
+                        letterSpacing={1}
+                        px={8}
+                        py={2}
                     >
                         {!status.submitting
                             ? !status.submitted
