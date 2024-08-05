@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Heading, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 interface MemberProps {
@@ -18,9 +18,23 @@ const Members: React.FC<MemberProps> = ({ name, socialId, link, id }) => {
                 height={1555 / 4}
             />
 
-            <Container mt={{ base: 2, md: 4}}>
-                <h3>{name}</h3>
-                <a href={link}>{socialId}</a>
+            <Container mt={{ base: 2, md: 4 }}>
+                <Heading
+                    as="h3"
+                    fontSize={{ base: "xl", md: "2xl" }}
+                    color="#2C3E50"
+                >
+                    {name}
+                </Heading>
+                <Link href={link}>
+                    <Text
+                        fontSize={{ base: "lg", md: "xl" }}
+                        color="#3498DB"
+                        _hover={{ textDecoration: "none" }}
+                    >
+                        {socialId}
+                    </Text>
+                </Link>
             </Container>
 
         </Container>

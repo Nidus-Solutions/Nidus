@@ -11,8 +11,7 @@ interface MainProps {
 
 const Main = ({ children, router }: MainProps) => {
 
-    const fix = router.route == "/services" || "/contact" ? "fixed" : "relative"
-
+    const fix = router.asPath === '/services' || router.asPath === '/contact' ? 'fixed' : 'relative'
 
     return (
         <Box as="main">

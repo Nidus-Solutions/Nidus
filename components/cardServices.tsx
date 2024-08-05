@@ -20,6 +20,7 @@ const CardServices = ({ title, items, icons }: CardProps) => {
             boxShadow='xl'
             borderColor="#3498DB"
             p={2}
+            bg="#ffffff"
         >
 
             <Stack>

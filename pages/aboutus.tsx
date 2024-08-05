@@ -31,6 +31,8 @@ const Aboutus = () => {
                         textAlign={"justify"}
                         mt={4}
                         lineHeight={1.3}
+                        color="#2C3E50"
+
                     >
                         O Nidus é uma empresa de tecnologia que tem como objetivo ajudar pequenas empresas a se tornarem mais eficientes e competitivas através da tecnologia.
                         Nós acreditamos que a tecnologia é uma ferramenta poderosa que pode ser usada para melhorar a vida das pessoas e a eficiência das empresas.
@@ -41,6 +43,7 @@ const Aboutus = () => {
                         textAlign={"justify"}
                         lineHeight={1.3}
                         mt={4}
+                        color="#2C3E50"
                     >
                         Nossa missão é trasformar ideias em realidade, e faremos tudo que estiver ao nosso alcance para ajudar nossos clientes a alcançarem seus objetivos. De pagamenos facilitados ao suporte técnico, estamos aqui para ajudar.
                     </Text>
@@ -57,8 +60,8 @@ const Aboutus = () => {
                     <Heading
                         as="h2"
                         textAlign="center"
-                        color={useColorModeValue("gray.800", "white")}
                         mt={4}
+                        color="gray.800"
                     >
                         Nossa Equipe
                     </Heading>
