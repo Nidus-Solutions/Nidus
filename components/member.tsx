@@ -1,18 +1,16 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link';
+import { Container } from "@chakra-ui/react";
+import Image from "next/image";
 
 interface MemberProps {
     name: string;
     socialId: string;
     link: string;
     id: string;
-    role: string;
 }
 
-const Member: React.FC<MemberProps> = ({ name, socialId, link, id, role }) => {
+const Members: React.FC<MemberProps> = ({ name, socialId, link, id }) => {
     return (
-        <div className='flex flex-col justify-center items-center gap-5'>
+        <Container>
             <Image
                 src={`/assets/team/nidus_faces_${id}.svg`}
                 alt={name}
@@ -20,17 +18,13 @@ const Member: React.FC<MemberProps> = ({ name, socialId, link, id, role }) => {
                 height={1555 / 4}
             />
 
-            <div>
-                <div className='text-2xl xl:text-3xl'>
-                    <p>{name}</p>
-                    {/* <span className='text-xl'>{role}</span> */}
-                </div>
-                <div className='text-xl'>
-                    <Link target='_blank' href={link}>{socialId}</Link>
-                </div>
-            </div>
-        </div>
-    )
+            <Container mt={{ base: 2, md: 4}}>
+                <h3>{name}</h3>
+                <a href={link}>{socialId}</a>
+            </Container>
+
+        </Container>
+    );
 }
 
-export default Member;
+export default Members;
