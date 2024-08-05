@@ -75,14 +75,13 @@ const Contact: React.FC = () => {
     return (
         <Layout title="Contato">
             <Container
-                maxW='container.sm'
+                maxW={{ base: "container.xl", md: "container.sm" }}
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
                 justifyContent='center'
                 p={4}
                 gap={6}
-                maxWidth={"40vw"}
             >
                 <Heading as='h1' size='2xl' textAlign='center'>
                     Entre em contato

@@ -72,7 +72,7 @@ const CardServices = ({ title, items, icons }: CardProps) => {
                                     width={{ base: 5, sm: 5 }}
                                     height={{ base: 5, sm: 5 }}
                                 />
-                                <Text key={index} fontSize={{ base: 'sm', sm: '0.6em' }}>
+                                <Text key={index} fontWeight={{base: "600", md: "400"}} fontSize={{ base: '0.6em', sm: '0.6em' }}>
                                     {item}
                                 </Text>
                             </Box>

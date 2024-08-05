@@ -12,6 +12,7 @@ const Aboutus = () => {
                 fontSize={{ base: "3xl", md: "4xl" }}
                 maxW={"container.xdl"}
                 justifyContent='left'
+                zIndex={-1}
             >
                 <Container pb={{ md: 5, lg: 8 }}>
                     <Heading as="h1" textAlign="left" color="gray.800">
@@ -70,6 +71,7 @@ const Aboutus = () => {
                         maxW={"container.lg"}
                         textAlign={"center"}
                         mt={{ base: 4, md: 12, lg: 14 }}
+                        gap={{ base: 6, md: 12 }}
                     >
                         <Member
                             name='João Gustavo Bispo'

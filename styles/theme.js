@@ -9,10 +9,5 @@ const styles = {
   }
 }
 
-const config = {
-  initialColorMode: 'light',
-  useSystemColorMode: false
-}
-
-const theme = extendTheme({ config, styles })
+const theme = extendTheme({ styles })
 export default theme

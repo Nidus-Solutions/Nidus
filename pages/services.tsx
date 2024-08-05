@@ -14,7 +14,7 @@ const Services = () => (
             maxW={"container.xdl"}
             justifyContent='left'
         >
-            <Container pb={{ md: 5, lg: 8 }}>
+            <Container pb={{ base: 10, md: 5, lg: 8 }}>
                 <Heading as="h1" textAlign="left" color="gray.800">
                     Serviços
                 </Heading>

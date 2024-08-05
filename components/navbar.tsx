@@ -46,10 +46,6 @@ const LinkItem = ({ href, path, target, children, ...props }: LinkItemProps) => 
     )
 }
 
-const MenuLink = React.forwardRef<HTMLAnchorElement, any>((props, ref) => (
-    <Link ref={ref} display="block" p={2} {...props} />
-))
-
 const Navbar = (props: { path: string }) => {
     const { path } = props;
 
@@ -59,12 +55,13 @@ const Navbar = (props: { path: string }) => {
             w="100%"
             bg="#2C3E50"
             color="#F1C40F"
-            zIndex={2}
+            zIndex={22}
             css={{ backdropFilter: 'blur(10px)' }}
             {...props}
         >
             <Container
                 display="flex"
+                flexDirection={{ base: 'column', md: 'row' }}
                 p={2}
                 maxW="container.xl"
                 alignItems="center"
@@ -79,7 +76,7 @@ const Navbar = (props: { path: string }) => {
                 <Stack
                     direction="row"
                     spacing={4}
-                    display={{ base: 'none', md: 'flex' }}
+                    display={"flex"}
                 >
                     <LinkItem href="/" path={path}>
                         Home
@@ -94,35 +91,8 @@ const Navbar = (props: { path: string }) => {
                         Contatos
                     </LinkItem>
                 </Stack>
-
-                <Box alignItems={'right'} >
-                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }} mr={2} >
-                        <Menu isLazy id="navbar-menu">
-                            <MenuButton
-                                as={IconButton}
-                                icon={<HamburgerIcon />}
-                                variant="outline"
-                                aria-label="Options"
-                            />
-                            <MenuList>
-                                <MenuItem as={MenuLink} href="/">
-                                    Home
-                                </MenuItem>
-                                <MenuItem as={MenuLink} href="/aboutus">
-                                    Sobre Nós
-                                </MenuItem>
-                                <MenuItem as={MenuLink} href="/services">
-                                    Serviços
-                                </MenuItem>
-                                <MenuItem as={MenuLink} href="/contact">
-                                    Contatos
-                                </MenuItem>
-                            </MenuList>
-                        </Menu>
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
 

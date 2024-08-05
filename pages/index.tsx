@@ -6,13 +6,14 @@ const Home = () => {
   return (
     <Layout title="Home">
       <Container
-        py={14}
+        py={{ base: 0, md: 12 }}
+        pb={{ base: 6, md: 0 }}
         maxW="container.xl"
         color="#2C3E50"
       >
         <Text fontSize={"20px"} color="#2C3E50" fontWeight={'thin'}>Ei! Somos a</Text>
-        <Heading as="h1" color="#3498DB" fontSize={'70px'}>Nidus</Heading>
-        <Heading as="h1" fontSize={'50px'}>Desenvolvimento | Web Designer 🥑</Heading>
+        <Heading as="h1" color="#3498DB" fontSize={{ base: "45px", md: "70px" }}>Nidus</Heading>
+        <Heading as="h1" fontSize={{ base: "30px", md: "50px" }}>Desenvolvimento | Web Designer 🥑</Heading>
         <Text
           mt={4}
           maxW="700px"
@@ -33,13 +34,13 @@ const Home = () => {
         </Link>
       </Container>
       <Container
-        py={14}
+        pb={16}
         maxW="container.xl"
       >
         <Text
-          fontSize={"40px"}
+          fontSize={{ base: "2xl", md: "2xl" }}
           fontWeight={'thin'}
-          textAlign={'justify'}
+          textAlign={'left'}
         >
           Conhecemos nossas ferramentas de cabo a rabo.
           Nossa equipe já contribuiu com diversos commits para projetos open-source e já estamos trabalhando com as tecnologias mais recentes do mercado.
