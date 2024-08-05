@@ -3,10 +3,11 @@ import Member from '@/components/member';
 
 import { Box, Button, Container, Heading, Link, Text, Textarea, useColorModeValue } from "@chakra-ui/react";
 
-const Home = () => {
+const Aboutus = () => {
     return (
         <Layout title="Sobre Nós">
             <Container
+                mt={4}
                 display={"flex"}
                 flexDirection={"column"}
                 fontSize={{ base: "3xl", md: "4xl" }}
@@ -15,6 +16,7 @@ const Home = () => {
                 <Box
                     borderBottomWidth={2}
                     borderColor="gray.500"
+                    pt={4}
                     mx="auto"
                 >
                     <Heading as="h1" textAlign="center" color={useColorModeValue("gray.800", "white")}>
@@ -109,4 +111,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Aboutus;
