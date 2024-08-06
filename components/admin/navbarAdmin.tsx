@@ -145,7 +145,7 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
                                     }
                                     onClick={() => {
                                         localStorage.removeItem('user');
-                                        window.location.href = '/admin/authenticate';
+                                        window.location.href = '/authentication';
                                     }}
                                 >
                                     Sair

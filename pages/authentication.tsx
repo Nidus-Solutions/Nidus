@@ -25,12 +25,12 @@ const Authentication = () => {
         info: { error: false, msg: null }
     });
 
-    useEffect(() => {
-        const user = localStorage.getItem("user");
-        if (user) {
-            window.location.href = "/admin";
-        } 
-    }, []);
+    // useEffect(() => {
+    //     const user = localStorage.getItem("user");
+    //     if (user) {
+    //         window.location.href = "/admin";
+    //     } 
+    // }, []);
 
     const handlOnChange = useCallback((e: { persist: () => void; target: { id: any; value: any; }; }) => {
         e.persist();

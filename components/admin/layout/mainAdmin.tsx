@@ -26,7 +26,7 @@ const MainAdmin = ({ children, router }: MainProps) => {
         if (user) {
             setUser(JSON.parse(user));
         } else {
-            window.location.href = "/admin/authentication";
+            window.location.href = "/authentication";
         }
     }, []);
 
