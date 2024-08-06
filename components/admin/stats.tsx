@@ -1,5 +1,6 @@
 import {
     Box,
+    Button,
     Flex,
     Stat,
     StatLabel,
@@ -16,6 +17,7 @@ interface StatsCardProps {
 
 const StatsCard = (props: StatsCardProps) => {
     const { title, stat, icon } = props
+
     return (
         <Stat
             px={{ base: 2, md: 4 }}
@@ -24,6 +26,7 @@ const StatsCard = (props: StatsCardProps) => {
             border={'1px solid'}
             borderColor={useColorModeValue('gray.800', 'gray.500')}
             rounded={'lg'}>
+
             <Flex justifyContent={'space-between'}>
                 <Box pl={{ base: 2, md: 4 }}>
                     <StatLabel fontWeight={'medium'} isTruncated>
@@ -33,12 +36,17 @@ const StatsCard = (props: StatsCardProps) => {
                         {stat}
                     </StatNumber>
                 </Box>
-                <Box
+                <Button
                     my={'auto'}
                     color={useColorModeValue('gray.800', 'gray.200')}
-                    alignContent={'center'}>
+                    alignContent={'center'}
+                    bg="none"
+                    _hover={{
+                        color: "teal.500",
+                    }}
+                >
                     {icon}
-                </Box>
+                </Button>
             </Flex>
         </Stat>
     )

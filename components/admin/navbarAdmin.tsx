@@ -35,9 +35,6 @@ const Links = ['dashboard', 'financeiro', 'contato']
 
 const NavLink = ({ href, path, target, children, ...props }: LinkItemProps) => {
     const active = path === href
-    console.log("-" + path);
-    console.log(href);
-
     return (
         <Link
             as={NextLink}
@@ -63,7 +60,6 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { path } = props;
     const { user } = props;
-
 
     return (
         <>

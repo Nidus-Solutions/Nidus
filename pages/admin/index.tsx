@@ -1,11 +1,15 @@
 import Layout from "@/components/admin/layout/articleAdmin";
-import { Box, chakra, Container, SimpleGrid } from "@chakra-ui/react";
+import { Box, Button, chakra, Container, SimpleGrid } from "@chakra-ui/react";
 import { BsPerson } from "react-icons/bs";
 import { FaBox } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
 import StatsCard from "@/components/admin/stats";
+import { useState } from "react";
 
 const HomeAdmin = () => {
+
+  const [show, setShow] = useState(false);
+
   const data = [
     { title: 'Users', stat: 150, icon: <BsPerson size={'3em'} /> },
     { title: 'Itens', stat: 3, icon: <FaBox size={'3em'} /> },
@@ -25,7 +29,7 @@ const HomeAdmin = () => {
           </chakra.h1>
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
             {data.map((item, index) => (
-              <StatsCard key={index} title={item.title} stat={item.stat} icon={item.icon} />
+              <StatsCard title={item.title} stat={item.stat} icon={item.icon} />
             ))}
           </SimpleGrid>
         </Box>
