@@ -72,7 +72,7 @@ const Authentication = () => {
         console.log(user);
 
         localStorage.setItem("user", JSON.stringify(user));
-        window.location.href = "/admin/";
+        window.location.href = "/admin";
 
         handleServerResponse(true, "Login efetuado com sucesso");
     }, []);

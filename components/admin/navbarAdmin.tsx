@@ -35,6 +35,8 @@ const Links = ['dashboard', 'financeiro', 'contato']
 
 const NavLink = ({ href, path, target, children, ...props }: LinkItemProps) => {
     const active = path === href
+    console.log("-" + path);
+    console.log(href);
 
     return (
         <Link
@@ -62,7 +64,6 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
     const { path } = props;
     const { user } = props;
 
-    console.log(user);
 
     return (
         <>
@@ -94,7 +95,7 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
                             {user.company || "Nidus"}
                         </Box>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-                            <NavLink href="/admin/" path={path}>
+                            <NavLink href="/admin" path={path}>
                                 Dashboard
                             </NavLink>
                             <NavLink href="/admin/finance" path={path}>

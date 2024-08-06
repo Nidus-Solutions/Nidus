@@ -11,9 +11,12 @@ interface MainProps {
 }
 
 const MainAdmin = ({ children, router }: MainProps) => {
-    const user = localStorage.getItem('user')
-        ? JSON.parse(localStorage.getItem('user') as string)
-        : null;
+    const user = {
+        username: "admin",
+        email: "jbispo20@mail.com",
+        urlImg: "https://avatars.githubusercontent.com/u/83095574?v=4",
+        company: "Nidus",
+    };
 
     return (
         <Box as="main">
