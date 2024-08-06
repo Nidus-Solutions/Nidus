@@ -9,7 +9,6 @@ interface InputsProps {
     required: boolean;
 }
 
-
 const InputComponent = ({id, onChange, type, required, value, placeholder }: InputsProps) => {
     return (
         <Input

@@ -9,7 +9,7 @@ import {
     useToast,
 } from '@chakra-ui/react'
 import { useCallback, useEffect, useState } from 'react'
-import InputComponent from '../Input';
+import InputComponent from '@/components/Input';
 
 const Authentication = () => {
     const toast = useToast();
@@ -69,7 +69,12 @@ const Authentication = () => {
         // TODO: Fazer depois
         e.preventDefault();
         setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-        localStorage.setItem("user", JSON.stringify(inputs))
+        localStorage.setItem("user", JSON.stringify({
+            username: "João Gustavo",
+            email: "joao.bispo@nidussolutions.com",
+            urlImg: "https://avatars.githubusercontent.com/u/83095574?v=4",
+            company: "Nidus Solutions",
+        }))
         const user = localStorage.getItem("user");
 
         if (user) {
