@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/article";
-
 import {  Button, Container, Heading, Link, Text } from "@chakra-ui/react";
 
 const Home = () => {
