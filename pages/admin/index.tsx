@@ -1,7 +1,20 @@
 import Layout from "@/components/admin/layout/articleAdmin";
-import {Container} from "@chakra-ui/react";
+import axios from 'axios'
+import { Container } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 const HomeAdmin = () => {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    axios.get(
+      "http://localhost:3000/api/hello").then(({ data }) => {
+        console.log(data)
+        setData(data.message)
+      })
+
+  }, []);
+
   return (
     <Layout title="Dashboard">
       <Container
@@ -10,7 +23,7 @@ const HomeAdmin = () => {
         maxW="container.xl"
         color="#2C3E50"
       >
-        Admin
+        {data}
       </Container>
     </Layout>
   )
