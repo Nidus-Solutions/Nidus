@@ -1,7 +1,6 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { Box, Container } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 
 import Navbar from "../navbarAdmin";
 import Footer from '../../Footer'
@@ -11,27 +10,11 @@ interface MainProps {
     router: AppProps["router"],
 }
 
-interface AdminProps {
-    username: string;
-    email: string;
-    urlImg: string;
-    company: string;
-}
-
 const MainAdmin = ({ children, router }: MainProps) => {
-    const [user, setUser] = useState<AdminProps>();
+    const user = localStorage.getItem('user')
+        ? JSON.parse(localStorage.getItem('user') as string)
+        : null;
 
-    useEffect(() => {
-        const user = localStorage.getItem("user");
-        if (user) {
-            setUser(JSON.parse(user));
-        } else {
-            window.location.href = "/authentication";
-        }
-    }, []);
-
-    if (!user) return null;
-    console.log(user);
     return (
         <Box as="main">
             <Head>
@@ -57,6 +40,7 @@ const MainAdmin = ({ children, router }: MainProps) => {
                 justifyContent={'center'}
                 alignItems={'center'}
                 bottom={0}
+                position={'fixed'}
                 minW={'full'}
             >
                 <Footer />

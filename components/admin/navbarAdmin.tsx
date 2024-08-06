@@ -17,10 +17,6 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
-interface Props {
-    children: React.ReactNode
-}
-
 interface AdminProps {
     username: string;
     email: string;
@@ -66,6 +62,8 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
     const { path } = props;
     const { user } = props;
 
+    console.log(user);
+
     return (
         <>
             <Box
@@ -93,7 +91,7 @@ const NavbarAdmin = (props: { path: string, user: AdminProps }) => {
                             fontWeight={'bold'}
                             color={'#F1C40F'}
                         >
-                            Admin: {user.company || "Nidus"}
+                            {user.company || "Nidus"}
                         </Box>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                             <NavLink href="/admin/" path={path}>

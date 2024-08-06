@@ -1,29 +1,34 @@
 import Layout from "@/components/admin/layout/articleAdmin";
-import axios from 'axios'
-import { Container } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Box, chakra, Container, SimpleGrid } from "@chakra-ui/react";
+import { BsPerson } from "react-icons/bs";
+import { FaBox } from "react-icons/fa";
+import { GiReceiveMoney } from "react-icons/gi";
+import StatsCard from "@/components/admin/stats";
 
 const HomeAdmin = () => {
-  const [data, setData] = useState()
-
-  useEffect(() => {
-    axios.get(
-      "http://localhost:3000/api/hello").then(({ data }) => {
-        console.log(data)
-        setData(data.message)
-      })
-
-  }, []);
+  const data = [
+    { title: 'Users', stat: 150, icon: <BsPerson size={'3em'} /> },
+    { title: 'Itens', stat: 3, icon: <FaBox size={'3em'} /> },
+    { title: 'Sales', stat: 10, icon: <GiReceiveMoney size={'3em'} /> },
+  ];
 
   return (
     <Layout title="Dashboard">
       <Container
-        py={{ base: 0, md: 12 }}
         pb={{ base: 6, md: 0 }}
         maxW="container.xl"
         color="#2C3E50"
       >
-        {data}
+        <Box maxW="7xl" mx={'auto'} px={{ base: 2, sm: 12, md: 17 }}>
+          <chakra.h1 textAlign={'left'} fontSize={'4xl'} pb={{ base: 5, md: 10 }} fontWeight={'bold'}>
+            Dados gerais sobre a empresa
+          </chakra.h1>
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+            {data.map((item, index) => (
+              <StatsCard key={index} title={item.title} stat={item.stat} icon={item.icon} />
+            ))}
+          </SimpleGrid>
+        </Box>
       </Container>
     </Layout>
   )

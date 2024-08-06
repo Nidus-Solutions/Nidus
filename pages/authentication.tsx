@@ -48,7 +48,7 @@ const Authentication = () => {
                 password: ""
             });
         } else {
-            setStatus({ 
+            setStatus({
                 submitted: false,
                 submitting: false,
                 info: { error: true, msg }
@@ -59,31 +59,22 @@ const Authentication = () => {
     const handleOnSubmit = useCallback((e: { preventDefault: () => void; }) => {
         e.preventDefault();
         setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
-
+        console.log("authenticating");
+        
         const user = {
             username: "admin",
-            email: inputs.email,
-            password: inputs.password,
-            urlImg: "nenhumainformacao",
-            company: "Company",
+            email: "jbispo20@mail.com",
+            password: "123456",
+            urlImg: "https://avatars.githubusercontent.com/u/83095574?v=4",
+            company: "Nidus",
         }
-        
+
         console.log(user);
 
-        axios({
-            method: "POST",
-            url: "http://localhost:3000/api/hello",
-            data: user
-        })
-            .then(() => {
-                handleServerResponse(true, "Login efetuado com sucesso");
-                localStorage.setItem("user", JSON.stringify(user));
-                window.location.href = "/admin";
-            })
-            .catch((error) => {
-                handleServerResponse(false, "Erro ao efetuar login");
-                console.error(error);
-            });
+        localStorage.setItem("user", JSON.stringify(user));
+        window.location.href = "/admin/";
+
+        handleServerResponse(true, "Login efetuado com sucesso");
     }, []);
 
     return (
@@ -98,7 +89,7 @@ const Authentication = () => {
                 <Stack spacing={4}>
                     <FormControl
                         as='form'
-                        onSubmit={handleOnSubmit} 
+                        onSubmit={handleOnSubmit}
                         display='flex'
                         flexDirection='column'
                         alignItems='center'
