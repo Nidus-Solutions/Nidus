@@ -1,18 +1,37 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { Box, Container } from "@chakra-ui/react";
-import Navbar from "../navbar";
-import Footer from '../Footer'
+import { useEffect, useState } from "react";
+
+import Navbar from "../navbarAdmin";
+import Footer from '../../Footer'
 
 interface MainProps {
     children: React.ReactNode,
     router: AppProps["router"],
 }
 
-const Main = ({ children, router }: MainProps) => {
+interface AdminProps {
+    username: string;
+    email: string;
+    urlImg: string;
+    company: string;
+}
 
-    const fix = router.asPath === '/aboutus' ? 'relative' : 'fixed'
+const MainAdmin = ({ children, router }: MainProps) => {
+    const [user, setUser] = useState<AdminProps>();
 
+    useEffect(() => {
+        const user = localStorage.getItem("user");
+        if (user) {
+            setUser(JSON.parse(user));
+        } else {
+            window.location.href = "/admin/authentication";
+        }
+    }, []);
+
+    if (!user) return null;
+    console.log(user);
     return (
         <Box as="main">
             <Head>
@@ -22,7 +41,7 @@ const Main = ({ children, router }: MainProps) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Navbar path={router.asPath} />
+            <Navbar path={router.asPath} user={user} />
 
             <Container maxW='container.xl' pt={14} >
                 {children}
@@ -39,7 +58,6 @@ const Main = ({ children, router }: MainProps) => {
                 alignItems={'center'}
                 bottom={0}
                 minW={'full'}
-                position={fix}
             >
                 <Footer />
             </Box>
@@ -47,4 +65,4 @@ const Main = ({ children, router }: MainProps) => {
     )
 }
 
-export default Main;
+export default MainAdmin;

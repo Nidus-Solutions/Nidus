@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/article";
 
-import { Box, Button, Container, Heading, Link, Text, Textarea } from "@chakra-ui/react";
+import {  Button, Container, Heading, Link, Text } from "@chakra-ui/react";
 
 const Home = () => {
   return (
