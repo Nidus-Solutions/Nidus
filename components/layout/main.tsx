@@ -20,15 +20,6 @@ const Main = ({ children, router }: MainProps) => {
                 <meta name="description" content="Site da empresa nidus" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16751621578">
-                </script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                
-                  gtag('config', 'AW-16751621578');
-                </script>
             </Head>
 
             <Navbar path={router.asPath} />
