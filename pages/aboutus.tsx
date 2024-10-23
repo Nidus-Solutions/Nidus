@@ -88,12 +88,12 @@ const Aboutus = () => {
                             link='https://www.instagram.com/thiago_v_viana'
                             id='thiago'
                         />
-                        <Member
+{/*                         <Member
                             name='Gabryella Moronari'
                             socialId='@gaby_moronari'
                             link='https://www.instagram.com/gaby_moronari'
                             id='gaby'
-                        />
+                        /> */}
                     </Container>
 
                     <Link href="/services">
