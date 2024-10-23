@@ -21,7 +21,7 @@ const Main = ({ children, router }: MainProps) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 
-                {/* Google Tag Manager */}
+                {/* Google Tag Ads */}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16751621578"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: `
@@ -29,6 +29,18 @@ const Main = ({ children, router }: MainProps) => {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', 'AW-16751621578');
+                    `,
+                }} /> 
+
+                {/* Google Tag Analytics */}
+               <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LKDGWPGEN"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                
+                    gtag('config', 'G-5LKDGWPGEN');
                     `,
                 }} /> 
             </Head>
