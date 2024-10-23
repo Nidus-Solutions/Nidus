@@ -1,5 +1,4 @@
 import Head from "next/head";
-import GoogleAdsense from "../../utils/GoogleAdsense";
 import type { AppProps } from "next/app";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
@@ -21,7 +20,17 @@ const Main = ({ children, router }: MainProps) => {
                 <meta name="description" content="Site da empresa nidus" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
-                <GoogleAdsense pId="AW-16751621578" />
+                
+                {/* Google Tag Manager */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16751621578"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-16751621578');
+                    `,
+                }} /> 
             </Head>
 
             <Navbar path={router.asPath} />
