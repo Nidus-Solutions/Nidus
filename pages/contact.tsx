@@ -3,6 +3,12 @@ import axio from "axios";
 import { Button, Container, FormControl, Heading, Input, Textarea, useToast } from "@chakra-ui/react";
 import Layout from "@/components/layout/article";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const Contact: React.FC = () => {
   const toast = useToast({
     duration: 3000,
