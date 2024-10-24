@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
   });
 
   const [status, setStatus] = useState({
-    submitted: false,
+    submitted: false, 
     submitting: false,
     info: { error: false, msg: null }
   });
@@ -27,14 +27,6 @@ const Contact: React.FC = () => {
     email: "",
     message: ""
   });
-
-  useEffect(() => {
-    if (status.submitted) {
-      // Snippet de conversão do Google Ads
-      window.gtag('event', 'conversion', {'send_to': 'AW-16751621578/zHPVCKiwleEZEMrr5bM-'});
-    }
-  }, [status.submitted]);
-
 
   const handlOnChange = useCallback((e: { persist: () => void; target: { id: any; value: any; }; }) => {
     e.persist();
@@ -48,6 +40,13 @@ const Contact: React.FC = () => {
       info: { error: false, msg: null }
     });
   }, []);
+
+   useEffect(() => {
+    if (status.submitted && typeof window.gtag === 'function') {
+      // Snippet de conversão do Google Ads
+      window.gtag('event', 'conversion', { 'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID });
+    }
+  }, [status.submitted]);
 
   const handleServerResponse = useCallback((ok: any, msg: any) => {
     if (ok) {
