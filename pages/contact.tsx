@@ -22,6 +22,14 @@ const Contact: React.FC = () => {
     message: ""
   });
 
+  useEffect(() => {
+    if (status.submitted) {
+      // Snippet de conversão do Google Ads
+      window.gtag('event', 'conversion', {'send_to': 'AW-16751621578/zHPVCKiwleEZEMrr5bM-'});
+    }
+  }, [status.submitted]);
+
+
   const handlOnChange = useCallback((e: { persist: () => void; target: { id: any; value: any; }; }) => {
     e.persist();
     setInputs((prev) => ({
@@ -195,3 +203,7 @@ const Contact: React.FC = () => {
 }
 
 export default Contact;
+function useEffect(arg0: () => void, arg1: any[]) {
+  throw new Error("Function not implemented.");
+}
+
