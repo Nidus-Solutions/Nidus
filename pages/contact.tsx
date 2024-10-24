@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import axio from "axios";
 import { Button, Container, FormControl, Heading, Input, Textarea, useToast } from "@chakra-ui/react";
 import Layout from "@/components/layout/article";
@@ -208,7 +208,3 @@ const Contact: React.FC = () => {
 }
 
 export default Contact;
-function useEffect(arg0: () => void, arg1: any[]) {
-  throw new Error("Function not implemented.");
-}
-
