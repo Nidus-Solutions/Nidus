@@ -22,25 +22,25 @@ const Main = ({ children, router }: MainProps) => {
                 <link rel="icon" href="/favicon.ico" />
 
                 {/* Google Tag Ads */}
-                <script async src={`https://www.googletagmanager.com/gtag/js?id=AW-${process.env.NEXT_PUBLIC_GOOGLE_ADS}`}></script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16751621578"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'AW-${process.env.NEXT_PUBLIC_GOOGLE_ADS}');
+                    gtag('config', 'AW-16751621578');
                     `,
                 }} />
 
                 {/* Google Tag Analytics */}
-                <script async src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LKDGWPGEN"></script>
                 <script dangerouslySetInnerHTML={{
                     __html: `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                 
-                    gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+                    gtag('config', 'G-5LKDGWPGEN');
                     `,
                 }} />
 
@@ -50,7 +50,7 @@ const Main = ({ children, router }: MainProps) => {
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-${process.env.NEXT_PUBLIC_GOOGLE_GTM}');
+                    })(window,document,'script','dataLayer','GTM-K3277D8Z')
                     `,
                 }} />
 
