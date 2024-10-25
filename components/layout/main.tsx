@@ -1,11 +1,16 @@
 import Head from "next/head";
 import dotenv from "dotenv";
-dotenv.config();
+
 import type { AppProps } from "next/app";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import Footer from '../Footer'
 import Script from "next/script";
+
+// carregando variaveis de ambiente e mostrando no console
+dotenv.config();
+console.log(process.env.NEXT_PUBLIC_API_URL);
+console.log(process.env.GTAG_MANAGER);
 
 interface MainProps {
     children: React.ReactNode,
