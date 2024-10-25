@@ -41,13 +41,6 @@ const Contact: React.FC = () => {
     });
   }, []);
 
-   useEffect(() => {
-    if (status.submitted && typeof window.gtag === 'function') {
-      // Snippet de conversão do Google Ads
-      window.gtag('event', 'conversion', { 'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID });
-    }
-  }, [status.submitted]);
-
   const handleServerResponse = useCallback((ok: any, msg: any) => {
     if (ok) {
       setStatus({
