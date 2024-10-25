@@ -72,6 +72,10 @@ const Contact: React.FC = () => {
 
         });
         handleServerResponse(true, "Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        // espera 4 segundos e redireciona para a página de agradecimento
+        setTimeout(() => {
+          window.location.href = "/thankyou";
+        }, 4000);
       })
       .catch((error) => {
         toast({
