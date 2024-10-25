@@ -6,6 +6,7 @@ import type { AppProps } from "next/app";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import Footer from '../Footer'
+import Script from 'next/script';
 
 interface MainProps {
     children: React.ReactNode,
@@ -23,13 +24,8 @@ const Main = ({ children, router }: MainProps) => {
                 <meta name="description" content="Site da empresa nidus" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
-
-                {/* Google Tag Manager */}
             </Head>
 
-            <GoogleAnalytics
-                gaId={`${process.env.GTAG_MANAGER}`}
-            />
 
             <Navbar path={router.asPath} />
 
