@@ -26,7 +26,7 @@ const Main = ({ children, router }: MainProps) => {
 
                 {/* Google Tag Manager */}
                 <Script
-                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG_MANAGER}`}
+                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_MANAGER}`}
                     strategy="afterInteractive" // Carregar após a interação do usuário
                 />
                 <Script id="google-analytics" strategy="afterInteractive">
@@ -34,9 +34,8 @@ const Main = ({ children, router }: MainProps) => {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', ${process.env.NEXT_PUBLIC_GTAG_MANAGER});
+                    gtag('config', ${process.env.GTAG_MANAGER});
                 `}
-                </Script>
             </Head>
 
             <Navbar path={router.asPath} />
