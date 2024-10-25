@@ -43,6 +43,18 @@ const Main = ({ children, router }: MainProps) => {
                     gtag('config', 'G-5LKDGWPGEN');
                     `,
                 }} />
+
+                <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-K3277D8Z"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                
+                    gtag('config', 'GTM-K3277D8Z');
+                    `,
+                }} />
+                
             </Head>
 
             <Navbar path={router.asPath} />
@@ -66,6 +78,15 @@ const Main = ({ children, router }: MainProps) => {
             >
                 <Footer />
             </Box>
+
+            <noscript>
+                <iframe
+                    src="https://www.googletagmanager.com/ns.html?id=GTM-K3277D8Z"
+                    height="0"
+                    width="0"
+                    style={{ display: 'none', visibility: 'hidden' }}
+                ></iframe>
+            </noscript>
         </Box>
     )
 }
