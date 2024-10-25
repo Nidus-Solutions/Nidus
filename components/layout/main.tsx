@@ -35,7 +35,7 @@ const Main = ({ children, router }: MainProps) => {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', ${process.env.GTAG_MANAGER});
-                `}
+                `}</Script>
             </Head>
 
             <Navbar path={router.asPath} />
