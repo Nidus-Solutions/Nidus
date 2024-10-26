@@ -1,6 +1,14 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react'
+import { useEffect } from 'react'
 
 export default function NotFound() {
+
+    useEffect(() => {
+        setTimeout(() => {
+            window.location.replace('/')
+        }, 2000)
+    })
+
     return (
         <Box textAlign="center" py={10} px={6}>
             <Heading

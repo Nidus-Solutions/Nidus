@@ -10,7 +10,14 @@ interface MemberProps {
 
 const Members: React.FC<MemberProps> = ({ name, socialId, link, id }) => {
     return (
-        <Container>
+        <Container
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+            maxW="container.lg"
+        >
             <Image
                 src={`/assets/team/nidus_faces_${id}.svg`}
                 alt={name}
@@ -26,7 +33,10 @@ const Members: React.FC<MemberProps> = ({ name, socialId, link, id }) => {
                 >
                     {name}
                 </Heading>
-                <Link href={link}>
+                <Link
+                    href={link}
+                    isExternal
+                >
                     <Text
                         fontSize={{ base: "lg", md: "xl" }}
                         color="#3498DB"

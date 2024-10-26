@@ -85,7 +85,7 @@ const Aboutus = () => {
                         <Member
                             name='Thaigo Viana'
                             socialId='@thiago_v_viana'
-                            link='https://www.instagram.com/thiago_v_viana'
+                            link='https://www.instagram.com/thiago_v_caitano'
                             id='thiago'
                         />
                     </Container>
@@ -93,8 +93,12 @@ const Aboutus = () => {
                     <Link href="/services">
                         <Button
                             mt={{ base: 4, md: 12, lg: 14 }}
-                            colorScheme="teal"
+                            bg="#3498DB"
+                            fontSize={{ base: "18", md: "22" }}
+                            color="#ffffff"
                             size="lg"
+                            letterSpacing={'0.1em'}
+                            _hover={{ bg: "#2C3E50" }}
                         >
                             Conheça Nossos Serviços
                         </Button>
