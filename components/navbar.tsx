@@ -61,7 +61,7 @@ const Navbar = (props: { path: string }) => {
                 justifyContent="space-between"
             >
                 <Flex align="center" mr={5}>
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+                    <Heading as="h1" size="lg" letterSpacing={'0.1em'} fontWeight="bold" >
                         Nidus Solutions
                     </Heading>
                 </Flex>
@@ -70,15 +70,13 @@ const Navbar = (props: { path: string }) => {
                     direction="row"
                     spacing={4}
                     display={"flex"}
+                    letterSpacing={'0.1em'}
                 >
                     <LinkItem href="/" path={path}>
                         Home
                     </LinkItem>
                     <LinkItem href="/aboutus" path={path}>
                         Sobre Nós
-                    </LinkItem>
-                    <LinkItem href="/services" path={path}>
-                        Serviços
                     </LinkItem>
                     <LinkItem href="/contact" path={path}>
                         Contatos

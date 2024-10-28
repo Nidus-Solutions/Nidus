@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
         // espera 4 segundos e redireciona para a página de agradecimento
         setTimeout(() => {
           window.location.href = "/thankyou";
-        }, 4000);
+        }, 2000);
       })
       .catch((error) => {
         toast({

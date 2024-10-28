@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/article";
-import {  Button, Container, Heading, Link, Text } from "@chakra-ui/react";
+import { Button, Container, Heading, Link, Text } from "@chakra-ui/react";
 
 const Home = () => {
   return (
@@ -10,12 +10,19 @@ const Home = () => {
         maxW="container.xl"
         color="#2C3E50"
       >
-        <Text fontSize={"20px"} color="#2C3E50" fontWeight={'thin'}>Ei! Somos a</Text>
+        <Text
+          fontSize={{ base: "16", md: "20" }}
+          color="#2C3E50"
+          fontWeight={'b'}
+        >
+          Ei! Somos a
+        </Text>
         <Heading as="h1" color="#3498DB" fontSize={{ base: "45px", md: "70px" }}>Nidus</Heading>
         <Heading as="h1" fontSize={{ base: "30px", md: "50px" }}>Desenvolvimento | Web Designer 🥑</Heading>
         <Text
           mt={4}
           maxW="700px"
+          fontSize={{ base: "lg", md: "xl" }}
         >
           Uma empresa de desenvolvimento de software jovem e inovadora. Com foco em qualidade e satisfação do cliente.
           Estamos sempre em busca de novos desafios e soluções. Vamos juntos?
@@ -27,6 +34,7 @@ const Home = () => {
             bg="#3498DB"
             color="#ffffff"
             size="lg"
+            _hover={{ bg: "#2C3E50" }}
           >
             Saiba mais
           </Button>
