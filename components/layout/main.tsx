@@ -63,6 +63,7 @@ const Main = ({ children, router }: MainProps) => {
                 alignItems={'center'}
                 bottom={0}
                 minW={'full'}
+                zIndex={998}
                 position={fix}
             >
                 <Footer />
