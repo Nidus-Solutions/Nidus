@@ -44,6 +44,7 @@ const Navbar = (props: { path: string }) => {
 
     return (
         <Box
+            fontFamily="sans-serif" 
             as="nav"
             w="100%"
             bg="#2C3E50"
@@ -61,7 +62,11 @@ const Navbar = (props: { path: string }) => {
                 justifyContent="space-between"
             >
                 <Flex align="center" mr={5}>
-                    <Heading as="h1" size="lg" letterSpacing={'0.1em'} fontWeight="bold" >
+                    <Heading
+                        as="h1" size="lg"
+                        letterSpacing={'0.1em'}
+                        fontWeight="bold"
+                        >
                         Nidus Solutions
                     </Heading>
                 </Flex>
