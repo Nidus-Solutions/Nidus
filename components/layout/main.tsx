@@ -64,7 +64,7 @@ const Main = ({ children, router }: MainProps) => {
                 bottom={0}
                 minW={'full'}
                 zIndex={998}
-                position={fix}
+                position={"fixed"}
             >
                 <Footer />
             </Box>
